@@ -23,9 +23,7 @@ console.log("Mongodb connected successfully");
 //middleware
 
 app.use(express.json());
-app.use(cors({
-    origin:"*" //All platform access //frontend url-
-}));
+app.use(cors());
 const auth=(request,response,next)=>{
     try{
         const token = request.header('backend-token');
